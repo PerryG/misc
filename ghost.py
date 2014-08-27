@@ -22,9 +22,9 @@ class GameTree:
             print 'Invalid dictionary path'
             exit()
 
-    def build_tree(self, dict, min_length):
+    def build_tree(self, d, min_length):
         self.root = Node()
-        for word in dict:
+        for word in d:
             # Some stupid thing about \r\n
             word = re.sub('\W+','', word)
             if len(word) < min_length:
